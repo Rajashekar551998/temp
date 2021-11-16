@@ -1,0 +1,13 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+#name {
+  float: left;
+  font-size: 50%;
+}
+
+#hp {
+  float: right;
+  width: 30rem;
+  height: 30rem;
+}

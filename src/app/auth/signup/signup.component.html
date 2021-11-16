@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="section-title">
+        <h2>Signup</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="complete_div">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form
+          (submit)="onSignup(signupForm)"
+          #signupForm="ngForm"
+          *ngIf="!isLoading"
+        >
+          <input
+            type="text"
+            id="name"
+            class="name"
+            placeholder=" Enter Email"
+            autocomplete="off"
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            id="name"
+            class="name"
+            placeholder=" Enter UserName"
+            autocomplete="off"
+          />
+          <br />
+          <br />
+          <div class="form-group">
+            <input
+              type="password"
+              id="pass"
+              class="pass"
+              placeholder=" Enter Password"
+              autocomplete="off"
+            />
+          </div>
+
+          <select class="form-select" id="interest1" name="interest1">
+            <option selected hidden value="">Select Your Interests</option>
+            <option value="cricket">Cricket</option>
+            <option value="football">Football</option>
+            <option value="hockey">Hockey</option>
+            <option value="food">Food</option>
+            <option value="human science">Human Science</option>
+            <option value="computer science">Computer Science</option>
+          </select>
+          <br />
+
+          <select class="form-select" id="interest2" name="interest2">
+            <option selected hidden value="">Select Your Interests</option>
+            <option value="cricket">Cricket</option>
+            <option value="football">Football</option>
+            <option value="hockey">Hockey</option>
+            <option value="food">Food</option>
+            <option value="human science">Human Science</option>
+            <option value="computer science">Computer Science</option>
+          </select>
+          <br />
+
+          <button id="signin_button" class="signin_button">Submit</button>
+          <br /><br />
+        </form>
+        <p id="user_signup">
+          Already have an account?
+          <a color="primary" [routerLink]="['/login']">Login</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/signup.png" alt="signin_image" id="sign_image" />
+      </div>
+    </div>
+  </div>
+</div>
